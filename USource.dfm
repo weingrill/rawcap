@@ -1,0 +1,52 @@
+object FSource: TFSource
+  Left = 691
+  Top = 110
+  BorderStyle = bsToolWindow
+  Caption = 'Source'
+  ClientHeight = 240
+  ClientWidth = 320
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object VideoCap1: TVideoCap
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 240
+    align = alClient
+    color = clNavy
+    DriverOpen = False
+    DriverIndex = -1
+    VideoOverlay = False
+    VideoPreview = False
+    PreviewScaleToWindow = True
+    PreviewScaleProportional = True
+    PreviewRate = 25
+    MicroSecPerFrame = 40000
+    FrameRate = 25
+    CapAudio = False
+    VideoFileName = 'Video.avi'
+    SingleImageFile = 'Capture.bmp'
+    CapTimeLimit = 0
+    CapIndexSize = 0
+    CapToFile = True
+    BufferFileSize = 0
+    OnFrameCallback = VideoCap1FrameCallback
+  end
+  object FPSource: TFormPlacement
+    IniFileName = 'Software\Weingrill\RAWCap'
+    IniSection = 'SourceForm'
+    UseRegistry = True
+    Left = 104
+    Top = 76
+  end
+end
